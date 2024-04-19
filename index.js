@@ -37,7 +37,7 @@ app.use(express.static('public'));
 
 //routes
 app.get("/", (req,res)  => { 
-    res.sendFile(__dirname + "/pages/index.html");
+    res.sendFile(__dirname + "/public/index.html");
 })
 
 app.post('/register', async (req, res) => {
