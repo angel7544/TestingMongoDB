@@ -1,0 +1,708 @@
+/* Optionally, add more styles for your navigation links, such as hover effects */
+
+body {
+    background-image: url('./assets/background.gif'); /* Replace 'your-background.gif' with the actual path to your GIF image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-size: cover; /* Cover the entire viewport */
+    background-attachment: fixed; /* Fix the background in place */
+    /* Optionally, you can add other background properties like background-position, background-color, etc. */
+  }
+  
+  /* Additional CSS styles for your page content */
+  
+  @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap");
+  
+  * {
+  
+  }
+  
+  body {
+   
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50x;
+}
+element.style {
+    padding-top: 5rem;
+}
+h1 {
+    text-align: center;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+element.style {
+    width: auto;
+    height: 180px;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    #desktop-nav {
+        display: flex;
+      }
+}
+
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  /* Define styles for the header and navigation bar */
+  /* Reset some default styles */
+  body, ul, li, a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  /* Define styles for the header and navigation bar */
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #280042 ;
+    
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Reversed the order for space between logo and menu icon */
+    width: 50%; /* Ensure the logo and menu icon take the full width */
+    max-width: 800px; /* Limit the maximum width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+  }
+  
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 10px; /* Adjusted margin to separate menu icon from logo */
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+  
+  .nav-links {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 20px;
+  }
+  
+  .nav-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    margin-right: 10px;
+  }
+  
+  .nav-links li a:hover {
+    color: #007bff;
+  }
+  
+  /* Add padding to the container to create space below the fixed header */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 70px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .logo img {
+        padding-top: 2rem;
+    }
+  
+    .menu-icon {
+        display: flex;
+    }
+  
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background-color: #333;
+        transition: 0.3s;
+    }
+  
+    .nav-links.active {
+        left: 0;
+    }
+  
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+  
+    .bar {
+        width: 25px;
+    }
+  }
+  
+  
+  /* Add padding to the container to create space below the fixed header */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 70px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .logo img {
+        padding-top: 2rem;
+    }
+  
+    .menu-icon {
+        display: flex; /* Display the menu icon on smaller screens */
+    }
+  
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 45px;
+        left: -100%;
+        width: 100%;
+        background-color: #33333300;
+        transition: 0.3s;
+        backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+  
+    }
+  
+    .nav-links.active {
+        left: 0;
+    }
+  
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+  
+    .bar {
+        width: 25px;
+    }
+  }
+  
+  /* Make the navigation bar responsive */
+  @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .logo {
+    }
+  
+    nav ul {
+        flex-direction: column;
+    }
+  
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .logo img {
+        padding-top: 2rem; /* Adjust the padding-top for smaller screens */
+    }
+  
+    nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+    }
+  
+    nav ul li {
+        margin: 10px 0; /* Add vertical spacing between nav items */
+    }
+  }
+  
+/* Additional CSS styles for your page content */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600&display=swap");
+
+* {
+
+}
+
+body {
+ 
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Add this CSS to your stylesheet */
+
+/* Style for the image container */
+.section__pic-container {
+  padding-top: 2rem;
+  display: inline-block; /* Ensure the container only takes the necessary space */
+  position: relative; /* Required for shadow positioning */
+  border-radius: 50%; /* Make the container round */
+  width: 100%; /* Adjust the container width as needed */
+  max-width: 200px; /* Set a maximum width for larger screens */
+  max-height: 200px;
+}
+
+
+/* Style for the image */
+.zoom-image {
+  display: block; /* Ensure the image takes the full width of the container */
+  width: 100%; /* Make the image responsive within the container */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition effect for zoom and shadow */
+  box-shadow: 0 0 15px rgba(74, 70, 70, 0.99); /* Add a round shadow with transparency */
+  border-radius: 50%; /* Make the image itself round */
+}
+
+/* Hover effect for the image */
+.zoom-image:hover {
+  transform: scale(1.1); /* Increase the scale value for more zoom */
+}
+
+.icon {
+  cursor: pointer;
+  height: 1rem;
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  transform: translateY(0); /* Initial transform */
+transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition effect */
+}
+.icon:hover {
+  color: #000000;
+  transform: translateY(-10px);
+
+}
+
+/* Add this CSS to your stylesheet */
+/* Style for the image */
+.about-pic {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease; /* Add a smooth transition for the flip effect */
+  transform-style: preserve-3d;
+}
+
+/* Add this CSS to your stylesheet */
+
+.text-container {
+  background-color: #f0f0f0;
+  color: #000000;
+  padding: -40px;
+  border-radius: 1px;
+  width: 700px; /* Set the width of the text container */
+  height: 200px; /* Set the height of the text container */
+  overflow: auto; /* Add scrollbars if content overflows the container */
+}
+
+.image-column {
+  flex: 1; /* Make the image column grow to fill available space */
+  padding: 20px; /* Add spacing around the image */
+}
+
+img {
+  max-width: 100%; /* Ensure the image does not exceed its container width */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+p {
+  background-color: #ffffff00;
+ /* Add spacing around the text and increase padding */
+  margin-top: -1rem;
+}
+
+p1 {
+  font-size: medium;
+  padding: auto; /* Add spacing around the text and increase padding */
+  border-radius: 1px;
+  color: #f2bc86; /* Change text color */
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+
+
+/* SECTIONS */
+
+section {
+  padding-top: 4rem;
+  height: 46rem;
+  margin: 0 15rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 400;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+.section__text__p2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*about section*/
+#system {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+.section__pic-container1 {
+
+}
+.article-title {
+  font-size: 12px;
+  font-weight: bold;
+  align-content: center;
+  text-align: center;
+ }
+
+/* Style for the article content */
+.article-content {
+ 
+  align-content: center;
+  text-align: center; /* Add margin to separate it from the title */
+}
+
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: ;
+  gap: 0rem;
+}
+
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+
+/* EXPERIENCE SECTION */
+
+/* Common styles for all screen sizes */
+#experience {
+  position: relative;
+}
+
+.experience-sub-title {
+  color: rgb(85, 85, 85);
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.experience-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.details-container {
+  padding: 4rem;
+  flex: 4;
+  background: rgba(255, 255, 255, 0.244);
+  border-radius: 5rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+/* Container Styles */
+.article-container {
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+/* Article Styles */
+article {
+  flex: 1;
+  min-width: 50px;
+  margin: 5rem;
+  background-color: #a6dad434;
+  border-radius: 5rem;
+  transition: transform 0.2s; /* Add a smooth transition for hover effect */
+}
+
+article .icon {
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Hover Effect */
+article:hover {
+  transform: scale(1.05); /* Scale up the article on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+
+
+
+/* PROJECTS SECTION */
+
+#projects {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(213, 208, 208);
+  background: rgba(63, 63, 63, 0.232);
+}
+
+.project-img {
+  border-radius: auto;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+/* CONTACT */
+
+#contact {
+  padding-top: 15rem;
+  padding-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(123, 12, 12) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: small;
+  font-style: italic;
+}
+
+.contact-icon {
+  height: 2.5rem;
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+  
+footer {
+  padding-top: 2rem;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #your-color; /* Set your desired background color */
+  /* Add other styles like padding, text color, etc. */
+}
+
+footer p {
+  color: white;
+    padding: 10px;
+    position: relative;
+    top: 50%; /* Position it vertically in the middle */
+    left: 50%; /* Position it horizontally in the middle */
+    transform: translate(-50%, -50%); /* Center it precisely */
+}
+
+
+#google_translate_element {
+  position: absolute;
+  top:5px; /* Adjust the top value to position it vertically */
+  right: 0; /* Adjust the right value to position it horizontally */
+  margin-top: 80px; /* Optional: Add margin for spacing from the top */
+  margin-right: 10px; /* Optional: Add margin for spacing from the right */
+  z-index: 100000; /* Make sure it appears above other content if needed */
+}

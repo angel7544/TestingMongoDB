@@ -80,7 +80,7 @@ app.post('/login', async (req, res) => {
 
         // Compare passwords (plaintext)
         if (password === user.password) {
-            res.redirect('/dashboard');
+            res.redirect('/index.html');
         } else {
             // If passwords don't match, redirect to login page with error message
             res.status(400).send('Invalid username or password');

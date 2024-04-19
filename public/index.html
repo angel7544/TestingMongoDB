@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angel's Portfolio</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+ 
+  </head>
+  <body>
+   
+    <header>
+      <div class="logo">
+        <img src="./assets/logo.png" alt="Angel Singh Logo">  
+      </div>
+      <nav>
+          <div class="menu-icon">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+          </div>
+          <ul class="nav-links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./error.html">Team</a></li>
+              <li><a href="./about.html">Portfolio</a></li>
+              <li><a href="./experience.html">Experience</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+          </ul>
+      </nav>
+  </header>
+    <div id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="John Doe profile picture" class="zoom-image"/>
+      </div>
+      <div class="section__text">
+        <h1 class="title">Angel Singh</h1>
+        <p class="section__text__p2">AWS, AI Prompt, LINUX, CyberSecurity - Expert </p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='https://linkedin.com/in/angel3002'">
+                LinkedIn    </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/angel3002'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/angel7544'"
+          />
+          <img
+          src="./assets/instagram.png"
+          alt="My Insta-Profile"
+          class="icon"
+          onclick="location.href='https://instagram.com/br31_mehul'"
+        />
+       
+      </div>
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    </script>
+    
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <footer>
+      <p>Copyright &#169; 2023 Angel Singh | All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
