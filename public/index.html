@@ -10,10 +10,30 @@
     <div class="container">
         <h1>User Registration</h1>
         <form action="/register" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Register</button>
-        </form>
+            <div class="wrapper">
+                <form>
+                    <div class="content">
+                      <input type="text" name="fullname" required="">
+                      <label>Your Full Name</label>
+                    </div>
+                    <div class="content">
+                      <input type="email" name="email" required="">
+                      <label>Your Email Address</label>
+                    </div>
+                    <div class="content">
+                      <input type="text" name="username" required="">
+                      <label>Your Username</label>
+                    </div>
+                                        <div class="content">
+                      <input type="password" name="password" required="">
+                      <label>Your Password</label>
+                    </div>
+                    
+                   
+                    <button type="submit">Submit</button>
+               
+                </form>    
+            </div>
     </div>
 </body>
 </html>

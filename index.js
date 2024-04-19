@@ -21,8 +21,10 @@ mongoose.connect(`mongodb+srv://${username}:${password}@testing.2ubomao.mongodb.
 
 // Create user schema
 const userSchema = new mongoose.Schema({
+    fullname: String,
+    email: String,
     username: String,
-    password: String
+    password: String,
 });
 
 // Create user model
@@ -35,16 +37,18 @@ app.use(bodyParser.json());
 
 app.use(express.static('public'));
 
-//routes
+//registartion routes
 app.get("/", (req,res)  => { 
     res.sendFile(__dirname + "/public/index.html");
 })
 
 app.post('/register', async (req, res) => {
     try {
-    const { username, password } = req.body;
+    const { fullname, email, username, password } = req.body;
 
     const newUser = new User({
+        fullname: fullname,
+        email: email,
         username: username,
         password: password
     });
