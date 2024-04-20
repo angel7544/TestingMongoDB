@@ -62,7 +62,10 @@ const handleErrors =(err) => {
     if (err.message.includes('user validation failed')){
         console.log(Object.values(err.errors))
     }
+    return error;
 }
+
+
 //auth controller
 app.post('/register', async (req, res) => {
     try {
@@ -84,6 +87,8 @@ app.post('/register', async (req, res) => {
             res.status(400).send('error, user not created')
     }});
 
+
+    
 // Express route to handle login
 app.post('/login', async (req, res) => {
     const { username, password } = req.body;
