@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 const {isEmail} = require("validator")
-
-const bodyParser = require("body-parser");
 const bcrypt = require('bcrypt');
+const bodyParser = require("body-parser");
+
 const session = require('express-session');
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
@@ -31,15 +31,12 @@ const userSchema = new mongoose.Schema({
 },
 });
 
-//fire a function after doc saved to db
-userSchema.post('save',function(doc,next){
-console.log('new user was created & saved', doc);
-next();
-})
+
 
 //fire a function after doc saved to db
-userSchema.pre('save',function(next){
-    console.log('new user about to be created & saved', this);
+userSchema.pre('save',async function(next){
+    const salt = await bcrypt.genSalt();
+    this.password = await bcrypt.hash(this.password,salt);
     next();
     })
     
