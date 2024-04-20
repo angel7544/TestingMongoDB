@@ -4,6 +4,8 @@ const bodyParser = require("body-parser");
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
+const User = require('../TestingMongoDB/models/User')
 
 
 
@@ -13,34 +15,22 @@ dotenv.config();
 
 
 // Middleware for session management
-app.use(session({
-    secret: 'secret',
-    resave: false,
-    saveUninitialized: true
-}));
-
-
+app.use(express.json());
+app.use(cookieParser());
 
 
 
 const  port = process.env.PORT || 3000;
 const username = process.env.MONGODB_USERNAME;
 const password = process.env.MONGODB_PASSWORD;
+
 mongoose.connect(`mongodb+srv://${username}:${password}@testing.2ubomao.mongodb.net/Testing`,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
-// Create user schema
-const userSchema = new mongoose.Schema({
-    fullname: String,
-    email: String,
-    username: String,
-    password: String,
-});
 
-// Create user model
-const User = mongoose.model('User', userSchema);
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -63,8 +53,11 @@ app.get("/dashboard", (req,res)  => {
 })
 
 
+//handle erroes
+const handleErrors =(error) => {
+    console.log(error.message,error.code)};
 
-
+//auth controller
 app.post('/register', async (req, res) => {
     try {
     const { fullname, email, username, password } = req.body;
@@ -77,11 +70,12 @@ app.post('/register', async (req, res) => {
     });
 
     await newUser.save() 
-            res.redirect('/');
+            res.status(201).json(newUser);
 }
         catch(error){
-            console.log("Error in registeration")
-            res.redirect("error");
+            handleErrors(error)
+            console.log("Error!")
+            res.status(400).send('error, user not created')
     }});
 
 // Express route to handle login
@@ -151,7 +145,23 @@ app.get('/dashboard.html', requireAuth, (req, res) => {
     // Render dashboard
 });
 
+//cookies
+app.get('/set-cookies',(req,res)  =>{
 
+//res.setHeader('Set-cookie','newUser=true');
+res.cookie('newUser', false);
+res.cookie('isUser', true,{httpOnly: true});
+res.send('you got the cookies');
+
+});
+
+app.get('/read-cookies',(req,res)  =>{
+
+    const cookies =req.cookies;
+    console.log(cookies.newUser);
+    res.json(cookies);
+
+});
 
 app.listen(port, () =>{ 
 console.log(`Server is running on port ${port}`);
