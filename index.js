@@ -53,10 +53,16 @@ app.get("/dashboard", (req,res)  => {
 })
 
 
-//handle erroes
-const handleErrors =(error) => {
-    console.log(error.message,error.code)};
+//handle errors
+const handleErrors =(err) => {
+    console.log(err.message,err.code);
+    let error = {email: '', password: ''};
 
+    //validation errors
+    if (err.message.includes('user validation failed')){
+        console.log(Object.values(err.errors))
+    }
+}
 //auth controller
 app.post('/register', async (req, res) => {
     try {
@@ -72,8 +78,8 @@ app.post('/register', async (req, res) => {
     await newUser.save() 
             res.status(201).json(newUser);
 }
-        catch(error){
-            handleErrors(error)
+        catch(err){
+           const errors = handleErrors(err);
             console.log("Error!")
             res.status(400).send('error, user not created')
     }});
